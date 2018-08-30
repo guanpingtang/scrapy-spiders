@@ -8,5 +8,5 @@
 
 # redis 存储爬取过的url，url去重
 
-#项目执行
+# 项目执行
 scrapy crawl cpc.cms
