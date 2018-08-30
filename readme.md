@@ -1,10 +1,12 @@
-scrapy crawl cpc.gcdt -o gcdt.jl
+# 爬取目标
+* http://cpc.people.com.cn/GB/64093/64094/index1.html
 
-/html/body/div[5]/div[1]/ul[1]
-/html/body/div[5]/div[1]/ul[2]
-/html/body/div[5]/div[1]/ul[3]
+# 数据库 存储爬取内容
+* mysql数据库
+* 创建database：aidang
+* 执行schemas sql文件
 
-/html/body/div[5]/div[1]/ul[1]/li[1]
-/html/body/div[5]/div[1]/ul[1]/li[2]
+# redis 存储爬取过的url，url去重
 
-/html/body/div[5]/div[1]/ul[2]/li[1]
+#项目执行
+scrapy crawl cpc.cms

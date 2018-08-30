@@ -1,0 +1,32 @@
+create table zhdj_cms_content
+(
+  id               varchar(32)                         not null primary key,
+  title            varchar(100)                        not null,
+  short_title      varchar(50)                         null,
+  short_txt        varchar(200)                        null,
+  channel_id       varchar(32)                         null,
+  cover_picture    varchar(256)                        null,
+  author           varchar(50)                         null,
+  origin           varchar(50)                         null,
+  origin_url       varchar(200)                        null,
+  published_at     timestamp default CURRENT_TIMESTAMP not null,
+  status           char                                null,
+  content_type     varchar(32)                         null,
+  external_url     varchar(200)                        null,
+  flags            smallint(6)                         null,
+  created_by       varchar(32)                         null,
+  created_at       datetime(6)                         null,
+  updated_by       varchar(32)                         null,
+  updated_at       timestamp default CURRENT_TIMESTAMP not null,
+  belong_org_id    varchar(32)                         null,
+  view_org_id      varchar(32)                         null,
+  json_value       mediumtext                          null,
+  compilation_type varchar(32)                         null,
+  is_obligatory    varchar(1)                          null
+);
+
+
+create table zhdj_cms_content_detail(
+  id  varchar(32) not null primary key,
+  txt mediumtext  null
+);
